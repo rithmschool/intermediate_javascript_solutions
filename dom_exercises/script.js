@@ -45,19 +45,19 @@ var newLi = document.createElement("li");
 
 newLi.innerText = "four"
 
-// Append the li to the ul element.
+// 10 - Append the li to the ul element.
 
 var list = document.querySelector("ul");
 list.appendChild(newLi);
 
-// Loop over all of the lis inside the ol tag and give them a background color of "green".
+// 11 - Loop over all of the lis inside the ol tag and give them a background color of "green".
 
 var liInsideOl = document.querySelectorAll("ol li");
 for(var i = 0; i < liInsideOl.length; i++){
     liInsideOl[i].style.backgroundColor = "green";
 }
 
-// Remove the div with a class of footer.
+// 12 - Remove the div with a class of footer.
 
 var footer = document.querySelector(".footer");
 footer.remove();
