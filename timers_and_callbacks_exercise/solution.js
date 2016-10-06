@@ -1,12 +1,12 @@
 function countDown(time){
   var timer = setInterval(function(){
-    time--
+    time--;
     if(time <= 0){
-      clearInterval(timer)
-      console.log('DONE!')
+      clearInterval(timer);
+      console.log('DONE!');
     }
     else {
-    console.log(time)
+      console.log(time);
     }
 
   },1000)
@@ -16,11 +16,11 @@ function randomGame(){
   var num;
   var times = 0;
   var timer = setInterval(function(){
-    num = Math.random()
+    num = Math.random();
     times++
     if(num > .75) {
-      clearInterval(timer)
-      console.log("It took " + times + " try/tries.")
+      clearInterval(timer);
+      console.log("It took " + times + " try/tries.");
     }
   },1000)
 }
@@ -48,7 +48,7 @@ function numberFact(num, fn){
 
 function find(arr, fn){
   for(var i=0; i<arr.length; i++){
-    if(fn(arr[i])) return arr[i]
+    if(fn(arr[i])) return arr[i];
   }
 }
 
@@ -61,10 +61,10 @@ function findIndex(arr, fn){
 function specialMultiply(a,b){
   if(arguments.length === 1){
     return function(b){
-      return a*b
+      return a*b;
     }
   }
-  return a*b
+  return a*b;
 }
 
 
