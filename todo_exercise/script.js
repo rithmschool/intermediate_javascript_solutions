@@ -8,7 +8,7 @@ window.onload = function(){
         event.preventDefault();
 
         var removeButton = document.createElement("button");
-        removeButton.innerText = "X"
+        removeButton.innerText = "X";
 
         var newTodo = document.createElement("li");
         newTodo.innerText = document.getElementById("task").value;;
@@ -21,10 +21,10 @@ window.onload = function(){
 
     todoList.addEventListener("click", function(event){
         if (event.target.tagName.toLowerCase() === 'li') {
-            event.target.style.textDecoration = "line-through"
+            event.target.style.textDecoration = "line-through";
         }
         else if (event.target.tagName.toLowerCase() === 'button') {
-            event.target.parentNode.remove()
+            event.target.parentNode.remove();
         }
     })
 
@@ -41,9 +41,9 @@ window.onload = function(){
     for(var i=0; i < savedTodos.length; i++){
         var newTodo = document.createElement("li");
         newTodo.innerText = savedTodos[i].task
-        newTodo.isCompleted = savedTodos[i].isCompleted ? true : false
+        newTodo.isCompleted = savedTodos[i].isCompleted ? true : false;
         if(newTodo.isCompleted) {
-            newTodo.style.textDecoration = "line-through"
+            newTodo.style.textDecoration = "line-through";
         }
         todoList.appendChild(newTodo);
     }
@@ -58,27 +58,27 @@ window.onload = function(){
         todoList.appendChild(newTodo);
 
         // save to localStorage
-        savedTodos.push({task: newTodo.innerText, isCompleted: false})
-        localStorage.setItem("todos", JSON.stringify(savedTodos))
+        savedTodos.push({task: newTodo.innerText, isCompleted: false});
+        localStorage.setItem("todos", JSON.stringify(savedTodos));
     })
 
     todoList.addEventListener("click", function(event){
-        var clickedListItem = event.target
+        var clickedListItem = event.target;
 
         if(!clickedListItem.isCompleted) {
-            clickedListItem.style.textDecoration = "line-through"
-            clickedListItem.isCompleted = true
+            clickedListItem.style.textDecoration = "line-through";
+            clickedListItem.isCompleted = true;
         } else {
-            clickedListItem.style.textDecoration = "none"
-            clickedListItem.isCompleted = false
+            clickedListItem.style.textDecoration = "none";
+            clickedListItem.isCompleted = false;
         }
 
         // breaks for duplicates - another option is to have dynamic IDs
         for(var i=0; i < savedTodos.length; i++){
             if(savedTodos[i].task === clickedListItem.innerText){
                 savedTodos[i].isCompleted = clickedListItem.isCompleted;
-                localStorage.setItem("todos", JSON.stringify(savedTodos))
+                localStorage.setItem("todos", JSON.stringify(savedTodos));
             }
         }
-    })
+    });
 }
