@@ -34,7 +34,7 @@ function isOdd(num){
 }
 
 function isPrime(value) {
-    for(var i = 2; i < Math.sqrt(value); i++) {
+    for(var i = 2; i <= Math.sqrt(value); i++) {
         if(value % i === 0) {
             return false;
         }
