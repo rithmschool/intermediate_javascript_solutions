@@ -34,7 +34,7 @@ footer.className += "main";
 
 // 7 - Remove the class main on the div with a class of footer.
 
-var footer = document.querySelector("footer");
+var footer = document.querySelector(".footer");
 footer.classList.remove("main");
 
 // 8 - Create a new li element.
