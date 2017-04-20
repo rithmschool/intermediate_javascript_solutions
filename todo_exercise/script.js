@@ -11,7 +11,7 @@ window.onload = function(){
         removeButton.innerText = "X";
 
         var newTodo = document.createElement("li");
-        newTodo.innerText = document.getElementById("task").value;;
+        newTodo.innerText = document.getElementById("task").value;
 
         todoList.appendChild(newTodo);
         newTodo.appendChild(removeButton);
