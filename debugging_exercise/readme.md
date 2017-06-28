@@ -3,6 +3,8 @@
 Answer the following questions:
 
 - What does the `throw` keyword do? **The throw keyword allows you to return an error/exception of your choice**
+- What does the finally keyword do? **The finally keyword executes after the try statement completes. The `finally` keyword executes regardless of whether or not an exception was thrown or caught.** 
+More info [here.](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch#The_finally_clause)
 - What is the difference between a `TypeError` and `ReferenceError` **TypeErrors occur when JavaScript is unable to perform a certain operation on a data type (invoking something that is not a function, accessing properties on something that is not an object). ReferenceErrors occur when JavaScript does not have a reference to the variable in memory (accessing a variable that is not defined or not in the current or outer scope)**
 - How do you create a snippet in the chrome dev tools? **Open the sources tab, head to the left hand panel and click on snippets, then right click inside the tab and click 'new'**
 - In the chrome dev tools, inside the sources tab, there is a "pause" button which allows you to "pause on caught exceptions". What is an `exception`?  **An exception is an error that occurs in your program. Caught exceptions are errors that are evaluated in a try/catch block**
