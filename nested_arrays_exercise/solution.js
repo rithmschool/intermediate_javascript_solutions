@@ -8,8 +8,9 @@ function rotate(arr, num){
 
 function makeXOGrid(rows,amount){
     var finalArr = []
-    var startWithX = true
+    
     for(var i=0; i<rows; i++){
+        var startWithX = true
         var newRow = []
         for(var j=0; j<amount; j++){
             if(startWithX){
